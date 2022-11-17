@@ -181,10 +181,15 @@ div {
 .cover {
     height: 80vh;
     background-image: url(WEB.jpg);
-    background-position: center;
+    background-position: 50% 50%;
     display: flex;
     /* text-align: center; */
 }
+
+/* @keyframes rotate {
+    0% {rotate: 0;}
+    100% {rotate: 360deg;}
+} */
 
 .make {
     margin: auto;
@@ -212,7 +217,7 @@ div {
 }
 
 .sync {
-    margin: 4em 0;
+    margin: 6em 0;
     display: flex;
     height: 60vh;
     box-sizing: border-box;
@@ -226,12 +231,29 @@ div {
 }
 
 .sync .gambar {
-    flex: 2;
+    background-image: url(Space.jpg);
+    background-position: center;
+    height: 60vh;
+    position: relative;
+    flex: 4;
     text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .sync .gambar img {
-    height: 60vh;
+    height: 40vmin;
+    padding-right: 2em;
+    position: absolute;
+    animation-name: terbang;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes terbang {
+    0% {bottom: 0;}
+    50% {bottom: 800px;}
+    100% {bottom: 0;}
 }
 
 .planet {
@@ -271,7 +293,7 @@ div {
     background-attachment: fixed;
     /* background-position: center; */
     background-position: 50% 55%;
-    position: relative;
+    /* position: relative; */
 }
 
 .swipe {
@@ -280,6 +302,7 @@ div {
 }
 
 .astro {
+    position: relative;
     height: 60vh;
     flex: 3;
     margin: auto;
@@ -289,10 +312,13 @@ div {
 .tlsn {
     flex: 2;
     margin: auto;
+    box-sizing: border-box;
+    padding: 1em;
 }
 
 .swipe .astro img {
-    width: 40vmin;
+    position: absolute;
+    width: 50vmin;
     margin: 2em;
     animation-name: move;
     animation-duration: 4s;
@@ -306,6 +332,42 @@ div {
     100% {
         opacity: 1;
     }
+}
+
+.tired {
+    height: 60vh;
+    display: flex;
+}
+
+.word {
+    flex: 3;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.drg {
+    height: 60vh;
+    flex: 3;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to left, rgba(238, 255, 0, 0.473), rgba(255, 255, 255, 0));
+}
+
+.drg img {
+    position: absolute;
+    width: 50vmin;
+    margin: 2em;
+    animation-name: geser;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes geser {
+    0% {left: 0;}
+    50% {left: 800px;}
+    100% {left: 0;}
 }
 
 @media screen and (max-width: 600px) {
