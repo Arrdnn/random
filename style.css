@@ -340,7 +340,7 @@ div {
 }
 
 .word {
-    flex: 3;
+    flex: 2;
     margin: auto;
     box-sizing: border-box;
     padding: 1em;
@@ -368,6 +368,32 @@ div {
     0% {left: 0;}
     50% {left: 800px;}
     100% {left: 0;}
+}
+
+.elite {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+    position: relative;
+}
+
+.elite h1 {
+    margin: auto;
+    font-size: 15vmin;
+}
+
+.someone {
+    /* background-color: white; */
+    margin: auto;
+    width: 20vw;
+    position: absolute;
+}
+
+.someone img {
+    /* text-align: center; */
+    width: 40vmin;
 }
 
 @media screen and (max-width: 600px) {
