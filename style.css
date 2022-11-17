@@ -396,6 +396,26 @@ div {
     width: 40vmin;
 }
 
+.hidden {
+    /* width: 95vw; */
+    background-color: yellow;
+    height: 100vh;
+    margin: auto;
+}
+
+.scroll {
+    /* height: 100vh; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll img {
+    height: 100vh;
+}
+
 @media screen and (max-width: 600px) {
 
 }
