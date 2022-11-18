@@ -289,11 +289,21 @@ div {
 
 .space {
     height: 100vh;
-    background-image: url(AF.jpg);
     background-attachment: fixed;
     /* background-position: center; */
     background-position: 50% 55%;
     /* position: relative; */
+    animation-name: change;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change {
+    0% {background-image: url(AF.jpg);}
+    25% {background-image: url(AG.jpg);}
+    50% {background-image: url(AT.jpg);}
+    75% {background-image: url(AG.jpg);}
+    100% {background-image: url(AF.jpg);}
 }
 
 .swipe {
@@ -404,12 +414,12 @@ div {
 }
 
 .scroll {
-    /* height: 100vh; */
+    width: auto;
     overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .scroll img {
